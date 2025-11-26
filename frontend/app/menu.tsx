@@ -106,7 +106,7 @@ export default function MenuScreen() {
     try {
       setRandomItem(null);
       setError('');
-      const response = await fetchWithTimeout('http://192.168.1.36:3000/menu');
+      const response = await fetchWithTimeout('https://coffee-shop-kappa-six.vercel.app/menu');
       if (!response.ok) throw new Error('Failed to fetch menu: Status ' + response.status);
       const data = await response.json();
       setMenuData(data);
